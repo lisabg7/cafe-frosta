@@ -8,7 +8,7 @@ A modern, minimalist landing page and menu for **Café Frosta**, a premium match
 
 ✦ Languages & Resources
 ** Built with: HTML, CSS / SASS, JavaScript
-** Design & Photos:** Inspired by Scandinavian café UI, photos from [Unsplash](https://unsplash.com) / [Pexels](https://pexels.com)
+** Design & Photos: Inspired by Scandinavian café UI, photos from [Unsplash](https://unsplash.com) / [Pexels](https://pexels.com)
 
 ---
 
