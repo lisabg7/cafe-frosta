@@ -1,0 +1,260 @@
+@use "_variables.scss" as *;
+@use "_mixins.scss" as *;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: $bg-color;
+    padding: 6rem 1.5rem 4rem;
+    gap: 2rem;
+
+    @include mq($bp-desktop) {
+        padding: 12rem 4rem 3rem;
+    }
+
+    &__eyebrow {
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 3px;
+        color: $secondary-color;
+        font-family: $text-font;
+
+        @include mq($bp-tablet) {
+            font-size: 16px;
+        }
+    }
+
+    h1 {
+        color: $secondary-color;
+        font-family: $heading-font;
+        font-size: 42px;
+
+        @include mq($bp-tablet) {
+            font-size: 64px;
+        }
+    }
+
+    p {
+        color: $secondary-color;
+        text-align: center;
+        font-family: $text-font;
+        font-size: 16px;
+        line-height: 1.3rem;
+
+        @include mq($bp-desktop) {
+            font-size: 20px;
+            padding: 0 20rem;
+        }
+    }
+}
+
+.list {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    margin: 3rem 0;
+    gap: 1.5rem;
+
+    list-style: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    @include mq($bp-desktop) {
+        margin: 4rem 0;
+    }
+}
+
+.list::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 19rem;
+    aspect-ratio: 1;
+    scroll-snap-align: center;
+
+    @include mq($bp-desktop) {
+        flex: 0 0 25rem;
+    }
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    background-color: $secondary-color;
+    border-radius: 10px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 6rem 1.5rem;
+
+    background-color: $secondary-color;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &--desktop {
+        display: none;
+
+        @include mq($bp-desktop) {
+            display: block;
+        }
+    }
+
+    &--mobile {
+        @include mq($bp-desktop) {
+            display: none;
+        }
+    }
+
+    h2 {
+        color: $heading-color;
+        font-family: $heading-font;
+        font-size: 40px;
+    }
+
+    p {
+        color: $paragraph-color;
+        font-family: $text-font;
+        line-height: 2rem;
+        font-size: 16px;
+        padding: 0;
+
+        @include mq($bp-tablet) {
+            line-height: 2.5rem;
+            font-size: 18px;
+        }
+    }
+
+    &__photo {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @include mq($bp-tablet) {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 4rem;
+        padding: 6rem 4rem;
+
+        &__text,
+        &__photo {
+            flex: 1;
+            min-width: 0;
+        }
+
+        &__photo {
+            width: auto;
+            aspect-ratio: auto;
+            order: 1;
+        }
+
+        &__text {
+            order: 2;
+        }
+    }
+}
+
+.sustainability {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0 1.5rem 3rem;
+
+    background-color: $secondary-color;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        order: 1;
+    }
+
+    &--desktop {
+        display: none;
+
+        @include mq($bp-desktop) {
+            display: block;
+        }
+    }
+
+    &--mobile {
+        @include mq($bp-desktop) {
+            display: none;
+        }
+    }
+
+    h2 {
+        color: $heading-color;
+        font-family: $heading-font;
+        font-size: 40px;
+    }
+
+    p {
+        color: $paragraph-color;
+        font-family: $text-font;
+        line-height: 2rem;
+        font-size: 16px;
+        padding: 0;
+
+        @include mq($bp-tablet) {
+            line-height: 2.5rem;
+            font-size: 18px;
+        }
+    }
+
+    &__photo {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        order: 2;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @include mq($bp-tablet) {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 4rem;
+        padding: 3rem 4rem 6rem;
+
+        &__text,
+        &__photo {
+            flex: 1;
+            min-width: 0;
+        }
+
+        &__photo {
+            width: auto;
+            aspect-ratio: auto;
+        }
+    }
+}

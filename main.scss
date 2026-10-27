@@ -1,0 +1,206 @@
+@use "variables.scss" as *;
+@use "_mixins.scss" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Header Styling
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    padding-bottom: 3rem;
+    background-color: $secondary-color;
+
+    @include mq($bp-desktop) {
+        padding: 4rem;
+        align-items: center;
+    }
+
+    .menu-toggle {
+    display: none;
+    }
+
+    .header__menu {
+        @include mq($bp-desktop) {
+        display: none;
+    }
+    }
+
+    .header__nav {
+        display: none;
+        padding: 2rem 0 0 0.3rem;
+        flex-basis: 100%;
+
+        @include mq($bp-desktop) {
+            display: flex;
+            justify-content: flex-start;
+            gap: 3rem;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: $text-font;
+            color: $paragraph-color;
+            font-size: 14px;
+
+            @include mq($bp-desktop) {
+                font-size: 18px;
+                color: $heading-color;
+                font-weight: bold;
+
+                &:hover {
+                    color: #5a820b;
+                }
+
+                &[aria-current="page"] {
+                    text-decoration: underline;
+                    text-underline-offset: 6px;
+                    text-decoration-thickness: 2px;
+                }
+
+                &:focus-visible {
+                    outline: 2px solid $bg-color;
+                    outline-offset: 3px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    .menu-toggle:checked ~ .header__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+
+        a {
+            color: $heading-color;
+            text-decoration: none;
+            font-family: $heading-font;
+            font-weight: 600;
+            font-size: 20px;
+
+            @include mq($bp-tablet) {
+                font-size: 30px;
+            }
+
+            &:focus-visible {
+                outline: 2px solid $bg-color;
+                outline-offset: 3px;
+                padding: 0.5rem;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+// Footer Styling
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    padding-top: 4rem;
+    background-color: $secondary-color;
+
+    @include mq($bp-desktop) {
+        background-color: $bg-color;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        padding: 2rem 4rem;
+
+        .nav {
+            justify-self: center;
+        }
+
+        p {
+            justify-self: end;
+        }
+    }
+
+    p {
+        color: $heading-color;
+        font-family: $text-font;
+        font-size: 10px;
+
+        @include mq($bp-desktop) {
+        color: $text-color;
+        }
+    }
+
+    &__logo {
+        a {
+            color: $heading-color;
+            text-decoration: none;
+            font-family: $heading-font;
+            font-weight: 600;
+
+            @include mq($bp-desktop) {
+                color: gainsboro;
+            }
+
+            &:focus-visible {
+                outline: 2px solid $secondary-color;
+                outline-offset: 3px;
+                padding: 0.5rem;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .nav {
+
+        &__links {
+            padding: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 2rem;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    color: $paragraph-color;
+                    font-family: $text-font;
+                    text-transform: uppercase;
+                    font-size: 12px;
+
+                    @include mq($bp-desktop) {
+                        color: $text-color;
+                        letter-spacing: 2px;
+
+                        &:hover {
+                            color: $secondary-color;
+                        }
+
+                        &:focus-visible {
+                            outline: 2px solid $secondary-color;
+                            outline-offset: 3px;
+                            padding: 0.5rem;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

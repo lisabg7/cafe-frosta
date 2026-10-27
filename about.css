@@ -1,0 +1,242 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3f5b07;
+  padding: 6rem 1.5rem 4rem;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .hero {
+    padding: 12rem 4rem 3rem;
+  }
+}
+.hero__eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #fefcf5;
+  font-family: "Inter", sans-serif;
+}
+@media (min-width: 768px) {
+  .hero__eyebrow {
+    font-size: 16px;
+  }
+}
+.hero h1 {
+  color: #fefcf5;
+  font-family: "Epilogue", sans-serif;
+  font-size: 42px;
+}
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 64px;
+  }
+}
+.hero p {
+  color: #fefcf5;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.3rem;
+}
+@media (min-width: 1024px) {
+  .hero p {
+    font-size: 20px;
+    padding: 0 20rem;
+  }
+}
+
+.list {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  margin: 3rem 0;
+  gap: 1.5rem;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+@media (min-width: 1024px) {
+  .list {
+    margin: 4rem 0;
+  }
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 19rem;
+  aspect-ratio: 1;
+  scroll-snap-align: center;
+}
+@media (min-width: 1024px) {
+  .card {
+    flex: 0 0 25rem;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #fefcf5;
+  border-radius: 10px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 6rem 1.5rem;
+  background-color: #fefcf5;
+}
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about--desktop {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .about--desktop {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .about--mobile {
+    display: none;
+  }
+}
+.about h2 {
+  color: #314629;
+  font-family: "Epilogue", sans-serif;
+  font-size: 40px;
+}
+.about p {
+  color: rgb(107, 107, 107);
+  font-family: "Inter", sans-serif;
+  line-height: 2rem;
+  font-size: 16px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .about p {
+    line-height: 2.5rem;
+    font-size: 18px;
+  }
+}
+.about__photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about__photo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 4rem;
+    padding: 6rem 4rem;
+  }
+  .about__text, .about__photo {
+    flex: 1;
+    min-width: 0;
+  }
+  .about__photo {
+    width: auto;
+    aspect-ratio: auto;
+    order: 1;
+  }
+  .about__text {
+    order: 2;
+  }
+}
+
+.sustainability {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 1.5rem 3rem;
+  background-color: #fefcf5;
+}
+.sustainability__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  order: 1;
+}
+.sustainability--desktop {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .sustainability--desktop {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .sustainability--mobile {
+    display: none;
+  }
+}
+.sustainability h2 {
+  color: #314629;
+  font-family: "Epilogue", sans-serif;
+  font-size: 40px;
+}
+.sustainability p {
+  color: rgb(107, 107, 107);
+  font-family: "Inter", sans-serif;
+  line-height: 2rem;
+  font-size: 16px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .sustainability p {
+    line-height: 2.5rem;
+    font-size: 18px;
+  }
+}
+.sustainability__photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  order: 2;
+}
+.sustainability__photo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .sustainability {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 4rem;
+    padding: 3rem 4rem 6rem;
+  }
+  .sustainability__text, .sustainability__photo {
+    flex: 1;
+    min-width: 0;
+  }
+  .sustainability__photo {
+    width: auto;
+    aspect-ratio: auto;
+  }
+}/*# sourceMappingURL=about.css.map */

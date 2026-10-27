@@ -1,0 +1,198 @@
+@use "variables.scss" as *;
+@use "_mixins.scss" as *;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 1.5rem;
+    align-items: center;
+    gap: 2rem;
+    background: 
+    linear-gradient(rgba(49, 70, 41, 0.364), rgba(49, 70, 41, 0.364)),
+    url("images/matcha.jpg") center / cover no-repeat;
+
+    @include mq($bp-tablet) {
+        padding: 7rem 10rem;
+    }
+
+    @include mq($bp-desktop) {
+        padding: 12rem 23rem;
+    }
+
+    &__eyebrow {
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 3px;
+        color: $secondary-color;
+        font-family: $text-font;
+
+        @include mq($bp-tablet) {
+            font-size: 16px;
+        }
+    }
+
+    h1 {
+        color: $secondary-color;
+        font-family: $heading-font;
+        font-size: 42px;
+
+        @include mq($bp-tablet) {
+            font-size: 64px;
+        }
+    }
+
+    p {
+        color: $secondary-color;
+        text-align: center;
+        font-family: $text-font;
+        font-size: 16px;
+        line-height: 1.3rem;
+
+        @include mq($bp-desktop) {
+            font-size: 20px;
+        }
+    }
+}
+
+.matcha {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 1rem;
+    align-items: center;
+    gap: 2rem;
+    background-color: $secondary-color;
+
+        @include mq($bp-tablet) {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            padding: 3rem;
+            align-items: stretch;
+
+            h2 {
+                grid-column: 1 / -1;
+                text-align: center;
+                padding: 4rem 0 1rem 0;
+            }
+        }
+
+    > div > div {
+        width: 100%;
+        aspect-ratio: 1;
+        background-color: gainsboro;
+        margin-bottom: 2rem;
+        border-radius: 20px;
+        margin-inline: auto;
+    }
+
+    h2 {
+        color: $heading-color;
+        font-family: $heading-font;
+        font-size: 30px;
+    }
+
+    &__card1, &__card2, &__card3, &__card4, &__card5, &__card6 {
+        width: 100%;
+        padding: 1rem;
+
+        h3 {
+            color: $heading-color;
+            font-family: $heading-font;
+            padding-bottom: 1rem; 
+        }
+
+        p {
+            color: $paragraph-color;
+            font-family: $text-font;
+            line-height: 1.3rem;
+            font-size: 16px;
+        }
+    }
+
+    .limited {
+        font-style: italic;
+        color: $paragraph-color;
+        font-family: $text-font;
+        font-size: 16px;
+        align-self: flex-start;
+        padding: 0 1rem;
+
+        @include mq($bp-tablet) {
+            margin-top: 2rem;
+            padding: 1rem;
+            grid-column: 1;
+            justify-self: start;
+        }
+    }
+}
+
+.coffee {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 1rem;
+    align-items: center;
+    gap: 2rem;
+    background-color: $bg-color;
+
+    @include mq($bp-tablet) {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            padding: 3rem;
+            align-items: stretch;
+
+            h2 {
+                grid-column: 1 / -1;
+                text-align: center;
+                padding: 4rem 0 1rem 0;
+            }
+        }
+
+    > div > div {
+        width: 100%;
+        aspect-ratio: 1;
+        background-color: gainsboro;
+        margin-bottom: 2rem;
+        border-radius: 20px;
+        margin-inline: auto;
+    }
+
+    h2 {
+        color: $secondary-color;
+        font-family: $heading-font;
+        font-size: 30px;
+    }
+
+    &__card1, &__card2, &__card3, &__card4, &__card5, &__card6 {
+        width: 100%;
+        padding: 1rem;
+
+        h3 {
+            color: $secondary-color;
+            font-family: $heading-font;
+            padding-bottom: 1rem; 
+        }
+
+        p {
+            color: $text-color;
+            font-family: $text-font;
+            line-height: 1.3rem;
+            font-size: 16px;
+        }
+    }
+
+    .limited {
+        font-style: italic;
+        color: $text-color;
+        font-family: $text-font;
+        font-size: 16px;
+        align-self: flex-start;
+        padding: 0 1rem;
+        
+
+        @include mq($bp-tablet) {
+            margin-top: 2rem;
+            padding: 1rem;
+            grid-column: 1;
+            justify-self: start;
+        }
+    }
+}

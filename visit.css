@@ -1,0 +1,134 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 1.5rem;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(rgba(49, 70, 41, 0.364), rgba(49, 70, 41, 0.364)), url("images/pexels-li-chunyu-2156528508-37697623.jpg") center/cover no-repeat;
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 7rem 10rem;
+  }
+}
+@media (min-width: 1024px) {
+  .hero {
+    padding: 12rem 23rem;
+  }
+}
+.hero__eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #fefcf5;
+  font-family: "Inter", sans-serif;
+}
+@media (min-width: 768px) {
+  .hero__eyebrow {
+    font-size: 16px;
+  }
+}
+.hero h1 {
+  color: #fefcf5;
+  font-family: "Epilogue", sans-serif;
+  font-size: 42px;
+}
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 64px;
+  }
+}
+.hero p {
+  color: #fefcf5;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.3rem;
+}
+@media (min-width: 1024px) {
+  .hero p {
+    font-size: 20px;
+  }
+}
+
+.contact {
+  padding: 4rem 1.5rem;
+  background-color: #3f5b07;
+}
+.contact__card1, .contact__card2, .contact__card3, .contact__card4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.contact h2 {
+  color: #fefcf5;
+  font-family: "Epilogue", sans-serif;
+  font-size: 30px;
+  padding: 1rem;
+}
+.contact p {
+  color: #cdd3ca;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5rem;
+  font-size: 16px;
+}
+.contact ul li {
+  list-style-type: none;
+  font-family: "Inter", sans-serif;
+  color: #cdd3ca;
+}
+.contact a {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  color: #cdd3ca;
+}
+.contact a:hover {
+  color: #fefcf5;
+}
+
+.main {
+  background-color: #3f5b07;
+  padding: 0 1.5rem 6rem;
+}
+@media (min-width: 1024px) {
+  .main {
+    padding: 0 4rem 4rem;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  gap: 1.5rem;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 19rem;
+  aspect-ratio: 1;
+  scroll-snap-align: center;
+}
+@media (min-width: 1024px) {
+  .card {
+    flex: 0 0 25rem;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #fefcf5;
+  border-radius: 10px;
+}/*# sourceMappingURL=visit.css.map */
